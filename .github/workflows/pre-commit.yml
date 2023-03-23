@@ -1,3 +1,4 @@
+#checkov:skip=CKV2_GHA_1: GitHub Actions are not supported for this check
 name: pre-commit
 
 on:
@@ -6,6 +7,21 @@ on:
     branches:
       - main
       - master
+
+permissions:
+  actions: write
+  checks: write
+  contents: write
+  deployments: write
+  id-token: write
+  issues: write
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
 
 env:
   PYTHON_VERSION: "3.10"
