@@ -1,4 +1,3 @@
-#checkov:skip=CKV2_GHA_1: GitHub Actions are not supported for this check
 name: pre-commit
 
 on:
