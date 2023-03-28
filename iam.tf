@@ -20,7 +20,7 @@ data "aws_iam_policy_document" "this_assume" {
 resource "aws_iam_policy" "this" {
   count = local.irsa_role_create && var.irsa_assume_role_enabled ? 1 : 0
 
-  name        = "${var.irsa_role_name_prefix}-assume-policy-${var.helm_chart_name}"
+  name        = "${var.irsa_role_name_prefix}-${var.helm_chart_name}"
   path        = "/"
   description = "Assume Policy for Crossplane role"
   policy      = data.aws_iam_policy_document.this_assume[0].json
