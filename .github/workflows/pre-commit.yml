@@ -7,6 +7,9 @@ on:
       - main
       - master
 
+permissions:
+  contents: read
+
 env:
   PYTHON_VERSION: "3.10"
   TERRAFORM_DOCS_VERSION: "v0.16.0"
