@@ -1,10 +1,10 @@
 <!-- BEGIN_TF_DOCS -->
-# AWS EKS Universal Addon Terraform module
+# AWS EKS Crossplane Terraform module
 
-A Terraform module to deploy the universal addon on Amazon EKS cluster.
+A Terraform module to deploy the [Crossplane](https://www.crossplane.io/) on Amazon EKS cluster.
 
-[![Terraform validate](https://github.com/lablabs/terraform-aws-eks-universal-addon/actions/workflows/validate.yaml/badge.svg)](https://github.com/lablabs/terraform-aws-eks-universal-addon/actions/workflows/validate.yaml)
-[![pre-commit](https://github.com/lablabs/terraform-aws-eks-universal-addon/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/lablabs/terraform-aws-eks-universal-addon/actions/workflows/pre-commit.yaml)
+[![Terraform validate](https://github.com/lablabs/terraform-aws-eks-crossplane/actions/workflows/validate.yaml/badge.svg)](https://github.com/lablabs/terraform-aws-eks-crossplane/actions/workflows/validate.yaml)
+[![pre-commit](https://github.com/lablabs/terraform-aws-crossplane/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/lablabs/terraform-aws-eks-crossplane/actions/workflows/pre-commit.yml)
 
 ---
 
@@ -56,6 +56,7 @@ See [basic example](examples/basic) for further information.
 
 | Name | Type |
 |------|------|
+| [aws_iam_policy_document.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 | [utils_deep_merge_yaml.values](https://registry.terraform.io/providers/cloudposse/utils/latest/docs/data-sources/deep_merge_yaml) | data source |
 > [!IMPORTANT]
 > Variables defined in [variables-addon[-irsa|oidc].tf](variables-addon.tf) defaults to `null` to have them overridable by the addon configuration defined though the [`local.addon[_irsa|oidc].*`](main.tf) local variable with the default values defined in [addon[-irsa|oidc].tf](addon.tf).
